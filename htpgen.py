@@ -1,5 +1,7 @@
 import argparse
 
+import bcrypt
+
 
 def main():
     parser = argparse.ArgumentParser(prog="htpgen",
@@ -9,7 +11,12 @@ def main():
 
     args = parser.parse_args()
 
-    return
+    username = args.username
+    password = args.password.encode("utf-8")
+    salt = bcrypt.gensalt(rounds=10)
+    generated = bcrypt.hashpw(password, salt).decode("utf-8")
+
+    print(f"{username}:{generated}")
 
 
 if __name__ == "__main__":

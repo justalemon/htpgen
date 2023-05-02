@@ -26,5 +26,8 @@ setup(
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: Implementation :: CPython",
     ],
+    install_requires=[
+        "bcrypt>=4.0.1,<5.0.0",
+    ],
     python_requires=">=3.8"
 )
