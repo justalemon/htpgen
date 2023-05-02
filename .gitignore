@@ -1,3 +1,8 @@
+# Arch Linux pacman
+pkg/
+src/
+*.pkg.tar.zst
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
